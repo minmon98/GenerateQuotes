@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Màn hình chính-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Màn hình chính" id="BYZ-38-t0r" customClass="ViewController" customModule="Project_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="5eJ-Zg-ODg">
+                                <rect key="frame" x="-753" y="0.0" width="1920" height="1080"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V6W-fL-RqM">
+                                <rect key="frame" x="77" y="141" width="261" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="261" id="r1l-9x-NgW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EGo-qK-56T">
+                                <rect key="frame" x="20" y="53" width="374" height="55"/>
+                                <color key="backgroundColor" red="0.2170479911" green="1" blue="0.39199218749999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="zOU-OZ-gav"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="30"/>
+                                <state key="normal" title="Chọn loại danh ngôn"/>
+                                <connections>
+                                    <segue destination="awA-Ed-dqh" kind="presentation" id="beL-ck-Vss"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5eJ-Zg-ODg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="1iu-uf-Dim"/>
+                            <constraint firstItem="EGo-qK-56T" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="33" id="4cq-sf-tbx"/>
+                            <constraint firstItem="V6W-fL-RqM" firstAttribute="top" secondItem="EGo-qK-56T" secondAttribute="bottom" constant="33" id="Ou6-hw-5NE"/>
+                            <constraint firstItem="5eJ-Zg-ODg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lOI-CT-Ail"/>
+                            <constraint firstItem="V6W-fL-RqM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vd1-3u-AEt"/>
+                            <constraint firstItem="EGo-qK-56T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xXT-Oy-Y4q"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imgBackground" destination="5eJ-Zg-ODg" id="7lk-VE-eYT"/>
+                        <outlet property="lblQoute" destination="V6W-fL-RqM" id="tfa-V8-rmK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-375" y="118"/>
+        </scene>
+        <!--Chọn loại danh ngôn-->
+        <scene sceneID="Bfo-it-T7E">
+            <objects>
+                <viewController title="Chọn loại danh ngôn" id="awA-Ed-dqh" customClass="ChooseQouteType" customModule="Project_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yjr-ah-tcv"/>
+                        <viewControllerLayoutGuide type="bottom" id="4TQ-Lv-2WZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Z3M-82-K2F">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WJR-NQ-I1Y">
+                                <rect key="frame" x="20" y="263" width="374" height="55"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="30"/>
+                                <state key="normal" title="Danh ngôn về cuộc sống"/>
+                                <connections>
+                                    <action selector="btnChoiceType_Clicked:" destination="awA-Ed-dqh" eventType="touchUpInside" id="7UK-AY-tRv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="geo-uW-LRn">
+                                <rect key="frame" x="20" y="328" width="374" height="55"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="30"/>
+                                <state key="normal" title="Danh ngôn về tình yêu"/>
+                                <connections>
+                                    <action selector="btnChoiceType_Clicked:" destination="awA-Ed-dqh" eventType="touchUpInside" id="RLP-xg-tsi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gVz-Vs-04c">
+                                <rect key="frame" x="20" y="198" width="374" height="55"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="30"/>
+                                <state key="normal" title="Danh ngôn tạo động lực"/>
+                                <connections>
+                                    <action selector="btnChoiceType_Clicked:" destination="awA-Ed-dqh" eventType="touchUpInside" id="YK3-5M-L5y"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gVz-Vs-04c" firstAttribute="leading" secondItem="Z3M-82-K2F" secondAttribute="leadingMargin" id="1BM-9q-1vt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gVz-Vs-04c" secondAttribute="trailing" id="6xu-iX-u9R"/>
+                            <constraint firstItem="WJR-NQ-I1Y" firstAttribute="leading" secondItem="Z3M-82-K2F" secondAttribute="leadingMargin" id="IvA-xn-EWJ"/>
+                            <constraint firstItem="geo-uW-LRn" firstAttribute="top" secondItem="WJR-NQ-I1Y" secondAttribute="bottom" constant="10" id="M3w-31-nxe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WJR-NQ-I1Y" secondAttribute="trailing" id="Vhw-LO-kBU"/>
+                            <constraint firstItem="gVz-Vs-04c" firstAttribute="centerX" secondItem="Z3M-82-K2F" secondAttribute="centerX" id="grY-d8-BWZ"/>
+                            <constraint firstItem="WJR-NQ-I1Y" firstAttribute="top" secondItem="gVz-Vs-04c" secondAttribute="bottom" constant="10" id="hGk-84-L5X"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="geo-uW-LRn" secondAttribute="trailing" id="hgQ-6L-BUh"/>
+                            <constraint firstItem="gVz-Vs-04c" firstAttribute="top" secondItem="yjr-ah-tcv" secondAttribute="bottom" constant="178" id="qtL-KQ-RjU"/>
+                            <constraint firstItem="geo-uW-LRn" firstAttribute="leading" secondItem="Z3M-82-K2F" secondAttribute="leadingMargin" id="wc0-Ku-pUM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="segueCatToQoute" id="jMB-Y7-oC7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sxs-vP-Ws9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="895.6521739130435" y="118.20652173913044"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back1.jpg" width="1920" height="1080"/>
+    </resources>
+</document>
